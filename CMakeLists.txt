@@ -1,0 +1,24 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 3.10 FATAL_ERROR)
+
+PROJECT(CcUtil)
+
+Message("################## Setting up ${PROJECT_NAME} #########################")
+
+SET_PROPERTY( GLOBAL PROPERTY USE_FOLDERS ON )
+SET_PROPERTY( GLOBAL PROPERTY PREDEFINED_TARGETS_FOLDER "CMake Targets" )
+
+ADD_SUBDIRECTORY(src)
+ADD_SUBDIRECTORY(test)
+
+
+
+
+
+
+
+
+
+
+
+
+
