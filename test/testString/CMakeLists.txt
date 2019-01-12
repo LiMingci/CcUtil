@@ -1,0 +1,49 @@
+SET(THIS_EXE_NAME testString)
+
+
+########################################### BEGIN: GRAB SOURCE FILES ##########################################
+FILE(GLOB THIS_EXE_SRCS RELATIVE_PATH ${CMAKE_CURRENT_SOURCE_DIR} "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp" )
+
+
+
+############################### GRAB HEADERS #####################################
+FILE(GLOB THIS_EXE_HEADERS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" 
+									"${CMAKE_CURRENT_SOURCE_DIR}/*.h")
+
+
+#SET(TARGET_COMMON_LIBRARIES ${CcDependentLibs} )
+
+#LINK_DIRECTORIES(C:/zlib1/lib)
+#FIND_PACKAGE(JPEG)
+
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/../../include)
+#LINK_DIRECTORIES()
+
+ADD_EXECUTABLE(${THIS_EXE_NAME} ${THIS_EXE_SRCS} ${THIS_EXE_HEADERS} )
+
+#TARGET_LINK_LIBRARIES(${THIS_EXE_NAME} CcString.lib)
+
+SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../bin)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

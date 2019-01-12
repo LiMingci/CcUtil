@@ -1,0 +1,50 @@
+SET(THIS_EXE_NAME testFileSystem)
+
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/../../include)
+
+LINK_DIRECTORIES(${CMAKE_CURRENT_SOURCE_DIR}/../../bin)
+
+########################################### BEGIN: GRAB SOURCE FILES ##########################################
+FILE(GLOB THIS_EXE_SRCS RELATIVE_PATH ${CMAKE_CURRENT_SOURCE_DIR} "${CMAKE_CURRENT_SOURCE_DIR}/*.cpp" )
+
+
+
+############################### GRAB HEADERS #####################################
+FILE(GLOB THIS_EXE_HEADERS RELATIVE "${CMAKE_CURRENT_SOURCE_DIR}" 
+									"${CMAKE_CURRENT_SOURCE_DIR}/*.h")
+
+
+#SET(TARGET_COMMON_LIBRARIES ${CcDependentLibs} )
+
+
+ADD_EXECUTABLE(${THIS_EXE_NAME} ${THIS_EXE_SRCS} ${THIS_EXE_HEADERS} )
+
+TARGET_LINK_LIBRARIES(${THIS_EXE_NAME} CcFileSystem.lib)
+
+SET(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../../bin)
+
+ADD_DEPENDENCIES(${THIS_EXE_NAME} CcFileSystem)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
