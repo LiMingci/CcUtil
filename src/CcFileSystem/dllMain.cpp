@@ -1,3 +1,4 @@
+#if 0
 #include <windows.h>
 
 extern "C"
@@ -9,3 +10,5 @@ BOOL WINAPI DllMain(
 	/* Nothing to do here yet. */
 	return TRUE;
 }
+
+#endif
